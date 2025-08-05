@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome, Admin</h1>
+
+    <h2>Transfer Money to User</h2>
+    <form id="transferForm">
+      <select id="recipient"></select>
+      <input type="number" id="amount" placeholder="Amount" required />
+      <input type="submit" value="Transfer" />
+    </form>
+
+    <h2>Transfer History</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>User</th><th>Amount (Rs)</th></tr>
+      </thead>
+      <tbody id="transferHistory"></tbody>
+    </table>
+
+    <h2>User Expenses</h2>
+    <form>
+      <select id="expenseUserFilter">
+        <option value="">-- Select User --</option>
+      </select>
+      <button type="button" id="filterBtn">View</button>
+    </form>
+    <p id="userBalanceDisplay" class="success"></p>
+    
+    <table>
+      <thead>
+        <tr><th>Date</th><th>User</th><th>Title</th><th>Amount (Rs)</th></tr>
+      </thead>
+      <tbody id="userExpenses"></tbody>
+    </table>
+  </div>
+  <script type="module" src="js/admin.js"></script>
+</body>
+</html>

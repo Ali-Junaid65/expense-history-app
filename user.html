@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container">
+    <button id="logoutBtn">Logout</button>
+    <h1>Welcome, <span id="userName">User</span></h1>
+
+    <h2>Add Expense</h2>
+    <form id="expenseForm">
+      <input type="number" id="totalBalance" placeholder="Total Balance" required>
+      <input type="number" id="expenseAmount" placeholder="Expense Amount" required>
+      <input type="text" id="expenseTitle" placeholder="Expense Title" required>
+      <input type="file" id="receiptImage">
+      <input type="submit" value="Add Expense">
+    </form>
+
+    <h2>Expense History</h2>
+    <table>
+      <thead>
+        <tr><th>Date</th><th>Title</th><th>Amount</th><th>Receipt</th></tr>
+      </thead>
+      <tbody id="expenseTable"></tbody>
+    </table>
+
+    <p><strong>Total Expenses:</strong> <span id="totalExpenses">₨0.00</span></p>
+    <p><strong>Remaining Balance:</strong> <span id="remainingBalance">₨0.00</span></p>
+  </div>
+
+  <script type="module" src="js/user.js"></script>
+</body>
+</html>

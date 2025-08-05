@@ -1,0 +1,139 @@
+/* style.css */
+:root {
+  --primary: #4a90e2;
+  --secondary: #f0f4f8;
+  --accent: #fff;
+  --text-dark: #222;
+  --text-light: #555;
+  --danger: #e74c3c;
+  --success: #27ae60;
+  --shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--secondary);
+  color: var(--text-dark);
+}
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: var(--accent);
+  padding: 25px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+h1, h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  text-align: center;
+}
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+input[type="text"],
+input[type="number"],
+input[type="file"],
+select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  min-width: 200px;
+  flex: 1;
+}
+input[type="submit"],
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: 0.3s;
+}
+input[type="submit"]:hover,
+button:hover {
+  background: #357ac9;
+}
+#logoutBtn {
+  background: var(--danger);
+  margin-bottom: 10px;
+  float: right;
+}
+#logoutBtn:hover {
+  background: #c0392b;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+th, td {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+.success {
+  color: var(--success);
+}
+.error {
+  color: var(--danger);
+}
+p {
+  margin-top: 15px;
+  font-size: 1rem;
+}
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 20px;
+  }
+  form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  input[type="text"],
+  input[type="number"],
+  input[type="file"],
+  select {
+    width: 100%;
+  }
+  input[type="submit"],
+  button {
+    width: 100%;
+  }
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  tr {
+    margin-bottom: 15px;
+  }
+  td {
+    padding-left: 50%;
+    position: relative;
+  }
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    font-weight: bold;
+  }
+}
+form label {
+  align-self: center;
+  min-width: 90px;
+  text-align: right;
+}
